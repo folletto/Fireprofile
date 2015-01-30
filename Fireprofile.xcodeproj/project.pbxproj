@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF86A7781A7B022700CF32F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A7771A7B022700CF32F2 /* AppDelegate.swift */; };
+		BF86A77A1A7B022700CF32F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A7791A7B022700CF32F2 /* ViewController.swift */; };
+		BF86A77C1A7B022700CF32F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF86A77B1A7B022700CF32F2 /* Images.xcassets */; };
+		BF86A77F1A7B022700CF32F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF86A77D1A7B022700CF32F2 /* Main.storyboard */; };
+		BF86A78B1A7B022700CF32F2 /* FireprofileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A78A1A7B022700CF32F2 /* FireprofileTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF86A7851A7B022700CF32F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF86A76A1A7B022700CF32F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF86A7711A7B022700CF32F2;
+			remoteInfo = Fireprofile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF86A7721A7B022700CF32F2 /* Fireprofile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireprofile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF86A7761A7B022700CF32F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF86A7771A7B022700CF32F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF86A7791A7B022700CF32F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF86A77B1A7B022700CF32F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF86A77E1A7B022700CF32F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF86A7841A7B022700CF32F2 /* FireprofileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireprofileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF86A7891A7B022700CF32F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF86A78A1A7B022700CF32F2 /* FireprofileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireprofileTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF86A76F1A7B022700CF32F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF86A7811A7B022700CF32F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF86A7691A7B022700CF32F2 = {
+			isa = PBXGroup;
+			children = (
+				BF86A7741A7B022700CF32F2 /* Fireprofile */,
+				BF86A7871A7B022700CF32F2 /* FireprofileTests */,
+				BF86A7731A7B022700CF32F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF86A7731A7B022700CF32F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF86A7721A7B022700CF32F2 /* Fireprofile.app */,
+				BF86A7841A7B022700CF32F2 /* FireprofileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF86A7741A7B022700CF32F2 /* Fireprofile */ = {
+			isa = PBXGroup;
+			children = (
+				BF86A7771A7B022700CF32F2 /* AppDelegate.swift */,
+				BF86A7791A7B022700CF32F2 /* ViewController.swift */,
+				BF86A77B1A7B022700CF32F2 /* Images.xcassets */,
+				BF86A77D1A7B022700CF32F2 /* Main.storyboard */,
+				BF86A7751A7B022700CF32F2 /* Supporting Files */,
+			);
+			path = Fireprofile;
+			sourceTree = "<group>";
+		};
+		BF86A7751A7B022700CF32F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF86A7761A7B022700CF32F2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF86A7871A7B022700CF32F2 /* FireprofileTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF86A78A1A7B022700CF32F2 /* FireprofileTests.swift */,
+				BF86A7881A7B022700CF32F2 /* Supporting Files */,
+			);
+			path = FireprofileTests;
+			sourceTree = "<group>";
+		};
+		BF86A7881A7B022700CF32F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF86A7891A7B022700CF32F2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF86A7711A7B022700CF32F2 /* Fireprofile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF86A78E1A7B022700CF32F2 /* Build configuration list for PBXNativeTarget "Fireprofile" */;
+			buildPhases = (
+				BF86A76E1A7B022700CF32F2 /* Sources */,
+				BF86A76F1A7B022700CF32F2 /* Frameworks */,
+				BF86A7701A7B022700CF32F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fireprofile;
+			productName = Fireprofile;
+			productReference = BF86A7721A7B022700CF32F2 /* Fireprofile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF86A7831A7B022700CF32F2 /* FireprofileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF86A7911A7B022700CF32F2 /* Build configuration list for PBXNativeTarget "FireprofileTests" */;
+			buildPhases = (
+				BF86A7801A7B022700CF32F2 /* Sources */,
+				BF86A7811A7B022700CF32F2 /* Frameworks */,
+				BF86A7821A7B022700CF32F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF86A7861A7B022700CF32F2 /* PBXTargetDependency */,
+			);
+			name = FireprofileTests;
+			productName = FireprofileTests;
+			productReference = BF86A7841A7B022700CF32F2 /* FireprofileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF86A76A1A7B022700CF32F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Davide 'Folletto' Casali";
+				TargetAttributes = {
+					BF86A7711A7B022700CF32F2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BF86A7831A7B022700CF32F2 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BF86A7711A7B022700CF32F2;
+					};
+				};
+			};
+			buildConfigurationList = BF86A76D1A7B022700CF32F2 /* Build configuration list for PBXProject "Fireprofile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF86A7691A7B022700CF32F2;
+			productRefGroup = BF86A7731A7B022700CF32F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF86A7711A7B022700CF32F2 /* Fireprofile */,
+				BF86A7831A7B022700CF32F2 /* FireprofileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF86A7701A7B022700CF32F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF86A77C1A7B022700CF32F2 /* Images.xcassets in Resources */,
+				BF86A77F1A7B022700CF32F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF86A7821A7B022700CF32F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF86A76E1A7B022700CF32F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF86A77A1A7B022700CF32F2 /* ViewController.swift in Sources */,
+				BF86A7781A7B022700CF32F2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF86A7801A7B022700CF32F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF86A78B1A7B022700CF32F2 /* FireprofileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF86A7861A7B022700CF32F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF86A7711A7B022700CF32F2 /* Fireprofile */;
+			targetProxy = BF86A7851A7B022700CF32F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF86A77D1A7B022700CF32F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF86A77E1A7B022700CF32F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF86A78C1A7B022700CF32F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF86A78D1A7B022700CF32F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF86A78F1A7B022700CF32F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Fireprofile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF86A7901A7B022700CF32F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Fireprofile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF86A7921A7B022700CF32F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FireprofileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fireprofile.app/Contents/MacOS/Fireprofile";
+			};
+			name = Debug;
+		};
+		BF86A7931A7B022700CF32F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FireprofileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fireprofile.app/Contents/MacOS/Fireprofile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF86A76D1A7B022700CF32F2 /* Build configuration list for PBXProject "Fireprofile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF86A78C1A7B022700CF32F2 /* Debug */,
+				BF86A78D1A7B022700CF32F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF86A78E1A7B022700CF32F2 /* Build configuration list for PBXNativeTarget "Fireprofile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF86A78F1A7B022700CF32F2 /* Debug */,
+				BF86A7901A7B022700CF32F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF86A7911A7B022700CF32F2 /* Build configuration list for PBXNativeTarget "FireprofileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF86A7921A7B022700CF32F2 /* Debug */,
+				BF86A7931A7B022700CF32F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF86A76A1A7B022700CF32F2 /* Project object */;
+}
