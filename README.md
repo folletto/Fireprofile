@@ -50,7 +50,7 @@ CHANGELOG
 LICENSE
 -------
 
-  _Copyright (C) 2010-2013, Davide Casali_  
+  _Copyright (C) 2015, Davide Casali_  
   _Licensed under **GNUv2 Opensource License**_
 
 
