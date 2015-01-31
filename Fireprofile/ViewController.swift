@@ -31,22 +31,23 @@ class ViewController: NSViewController {
     func readProfiles() {
         // ****************************************************************************************************
         // Let's read the folders inside the subdirectory "/profiles" as our profiles
+        // Props @erokhin for the help.
         //
         
         var profilesPath = NSBundle.mainBundle().bundlePath.stringByDeletingLastPathComponent + "/profiles";
         
         profilesList.removeAllItems();
         
-        var path: String? = "";
-        var directoryEnumerator: NSDirectoryEnumerator? = NSFileManager().enumeratorAtPath(profilesPath);
+        let dirURL = NSURL(fileURLWithPath: profilesPath);
+        let directoryEnumerator = NSFileManager.defaultManager().enumeratorAtURL(dirURL!, includingPropertiesForKeys: nil, options: nil, errorHandler: nil);
         
-        while let path = directoryEnumerator?.nextObject() as? String {
-            //if directoryEnumerator?.fileAttributes?["fileType"] as String == NSFileTypeDirectory {
-                profilesList.addItemsWithTitles([path]);
+        while let url = directoryEnumerator?.nextObject() as NSURL? {
+            var isDirectory: ObjCBool = ObjCBool(false);
+            if NSFileManager.defaultManager().fileExistsAtPath(url.path!, isDirectory: &isDirectory) {
+                profilesList.addItemsWithTitles([url.lastPathComponent!]);
                 directoryEnumerator?.skipDescendants();
-            //}
+            }
         }
-        
     }
     
     @IBAction func launchFirefox(sender: NSButton) {
