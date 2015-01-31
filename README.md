@@ -25,7 +25,6 @@ TODO
 ----
 
 * UI, Icon...
-* Filter out just folders from the list.
 
 
 MAY DO
