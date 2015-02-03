@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		BF86A7781A7B022700CF32F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A7771A7B022700CF32F2 /* AppDelegate.swift */; };
 		BF86A77A1A7B022700CF32F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A7791A7B022700CF32F2 /* ViewController.swift */; };
-		BF86A77C1A7B022700CF32F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF86A77B1A7B022700CF32F2 /* Images.xcassets */; };
 		BF86A77F1A7B022700CF32F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF86A77D1A7B022700CF32F2 /* Main.storyboard */; };
 		BF86A78B1A7B022700CF32F2 /* FireprofileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86A78A1A7B022700CF32F2 /* FireprofileTests.swift */; };
+		BF8F59411A808A5200D16CE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF86A77B1A7B022700CF32F2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,8 +189,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF86A77C1A7B022700CF32F2 /* Images.xcassets in Resources */,
 				BF86A77F1A7B022700CF32F2 /* Main.storyboard in Resources */,
+				BF8F59411A808A5200D16CE4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +397,7 @@
 				BF86A7901A7B022700CF32F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF86A7911A7B022700CF32F2 /* Build configuration list for PBXNativeTarget "FireprofileTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +406,7 @@
 				BF86A7931A7B022700CF32F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
