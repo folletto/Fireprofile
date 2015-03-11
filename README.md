@@ -12,6 +12,15 @@ It's just a simple app that allows you to launch a local (separate) copy of Fire
 using one or many local (separate) profile folder.
 
 
+CONTRIBUTE AND BUILD
+--------------------
+
+* Download / Clone this repository
+* Run in Xcode
+* You'll need after the first run to open the Debug folder and add a `/profile` subfolder with some empty folders inside it that will be used as profiles. This is still manual, sorry.
+
+In the same way you can build and keep it as a separate standalone App: `Product` → `Archive` → `Export...`.
+
 
 
 KNOWN LIMITATIONS
