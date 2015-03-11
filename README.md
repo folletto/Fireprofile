@@ -17,7 +17,11 @@ CONTRIBUTE AND BUILD
 
 * Download / Clone this repository
 * Run in Xcode
-* You'll need after the first run to open the Debug folder and add a `/profile` subfolder with some empty folders inside it that will be used as profiles. This is still manual, sorry.
+* Right click on the running app icon then `Options` → `Show in Finder`.
+* In the folder that opens up:
+  * add a copy of `Firefox.app`.
+  * add a `/profile` subfolder with some empty folders inside it that will be used as profiles.
+* Close the app and re-run it.
 
 In the same way you can build and keep it as a separate standalone App: `Product` → `Archive` → `Export...`.
 
