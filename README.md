@@ -58,7 +58,7 @@ CHANGELOG
 LICENSE
 -------
 
-  _Copyright (C) 2015, Davide Casali_  
+  _Copyright (C) 2015, Erin Casali_  
   _Licensed under **GNUv2 Opensource License**_
 
 
