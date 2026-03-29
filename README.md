@@ -2,6 +2,8 @@
 
 Firefox launcher that allows picking different profiles from the local ./profiles folder. For macOS.
 
+<p align="center"><img width="472" height="480" alt="Fireprofile main screen" src="https://github.com/user-attachments/assets/8b81df66-bcc8-41f1-b103-f2b7e7f936dd" /></p>
+
 
 
 ## How it works
