@@ -8,6 +8,8 @@ Firefox launcher that allows picking different profiles from the local ./profile
 
 ## How it works
 
+Download the latest version from the [releases](https://github.com/folletto/Fireprofile/releases).
+
 1. Place Fireprofile.app in an empty folder (i.e. "Fireprofile/Fireprofile.app")
 2. Add Firefox.app in the same folder
 3. Run Fireprofile
