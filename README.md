@@ -1,56 +1,32 @@
-Fireprofile
-===========
+# Fireprofile
 
-**Firefox Profiles Launcher using Local/Portable folders. GPL licensed.**  
-
-
-
-WHAT IS FIREPROFILE
--------------------
-
-It's just a simple app that allows you to launch a local (separate) copy of Firefox
-using one or many local (separate) profile folder.
-
-
-CONTRIBUTE AND BUILD
---------------------
-
-* Download / Clone this repository
-* Run in Xcode
-* Right click on the running app icon then `Options` → `Show in Finder`.
-* In the folder that opens up:
-  * add a copy of `Firefox.app`.
-  * add a `/profile` subfolder with some empty folders inside it that will be used as profiles.
-* Close the app and re-run it.
-
-In the same way you can build and keep it as a separate standalone App: `Product` → `Archive` → `Export...`.
+Firefox launcher that allows picking different profiles from the local ./profiles folder. For macOS.
 
 
 
-KNOWN LIMITATIONS
------------------
+## How it works
 
-* The folder management is manual: create `/profile` and empty folders inside it with the profile names.
-* Doesn't include Firefox.
-
-
-TODO
-----
-
-* UI, Icon...
+1. Place Fireprofile.app in an empty folder (i.e. "Fireprofile/Fireprofile.app")
+2. Add Firefox.app in the same folder
+3. Run Fireprofile
+4. Create a new profile. This will automatically create the /profiles folder in the same location of the Fireprofile.app
+5. Now click to execute the selected profile with the local Firefox copy.
 
 
-MAY DO
-------
 
-* Manage profiles directly (add/rename/delete)
-* Download latest version of Firefox on first launch
+## Contributions
+
+Feel free to contribute ideas and PRs.
 
 
-CHANGELOG
----------
 
-* **0.9** (29/01/2015)
+## Changelog
+
+* **2.0** (29 Mar 2026)
+  * Create a new Fireprofile from scratch with Claude Code, using SwiftUI.
+* **1.0** (3 Feb 2015)
+  * Feaature parity with old code.
+* **0.9** (29 Jan 2015)
   * Ported "Portable Firefox CX", an old app I made in 2006, to Swift.
 
 
@@ -58,7 +34,7 @@ CHANGELOG
 LICENSE
 -------
 
-  _Copyright (C) 2015, Erin Casali_  
+  _Copyright (C) 2026, Erin Casali_  
   _Licensed under **GNUv2 Opensource License**_
 
 
