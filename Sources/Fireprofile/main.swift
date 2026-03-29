@@ -137,6 +137,10 @@ struct ContentView: View {
             // ── Profile list or empty state ──────────────────────────────────
             if profiles.isEmpty {
                 EmptyStateView { showCreateSheet = true }
+                    .background(Color(NSColor.controlBackgroundColor))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 8)
             } else {
                 List(profiles, id: \.self) { profile in
                     Button { launch(profile: profile) } label: {
@@ -144,10 +148,14 @@ struct ContentView: View {
                     }
                     .buttonStyle(.plain)
                     .contextMenu { contextMenu(for: profile) }
-                    //.listRowBackground(Color(NSColor.controlBackgroundColor))
+                    .listRowBackground(Color(NSColor.controlBackgroundColor))
                 }
-                .listStyle(.inset)
-                //.scrollContentBackground(.hidden)
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .background(Color(NSColor.controlBackgroundColor))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.horizontal, 16)
+                .padding(.bottom, 8)
             }
 
             // ── Status / error bar ───────────────────────────────────────────
@@ -632,6 +640,7 @@ struct WindowDragShim: NSViewRepresentable {
         let view = NSView()
         Task { @MainActor in
             view.window?.isMovableByWindowBackground = true
+            view.window?.backgroundColor = NSColor.windowBackgroundColor
         }
         return view
     }
