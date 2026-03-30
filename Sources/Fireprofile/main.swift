@@ -69,7 +69,6 @@ struct FireprofileApp: App {
         // Window (macOS 14+) gives a single non-duplicatable instance — right for a launcher.
         Window("Fireprofile", id: "main") {
             ContentView()
-                .containerBackground(Color(NSColor.windowBackgroundColor), for: .window)
         }
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
