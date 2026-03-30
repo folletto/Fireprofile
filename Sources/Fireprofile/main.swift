@@ -106,7 +106,7 @@ struct ContentView: View {
     private static let logoPadding:  CGFloat = 32    // total vertical padding around logo
     private static let statusHeight: CGFloat = 28    // status bar + its padding
     private static let rowHeight:    CGFloat = 40    // inset List row
-    private static let listOverhead: CGFloat = 16    // List's own top+bottom insets
+    private static let listOverhead: CGFloat = 16    // ScrollView top+bottom padding (8+8)
 
     private var contentHeight: CGFloat {
         let halfScreen = (NSScreen.main?.visibleFrame.height ?? 800) / 2
@@ -138,15 +138,23 @@ struct ContentView: View {
             if profiles.isEmpty {
                 EmptyStateView { showCreateSheet = true }
             } else {
-                List(profiles, id: \.self) { profile in
-                    Button { launch(profile: profile) } label: {
-                        ProfileRow(profile: profile)
+                ScrollView {
+                    VStack(spacing: 0) {
+                        ForEach(Array(profiles.enumerated()), id: \.element) { index, profile in
+                            if index > 0 {
+                                Divider().padding(.leading, 44)
+                            }
+                            Button { launch(profile: profile) } label: {
+                                ProfileRow(profile: profile)
+                                    .padding(.horizontal, 12)
+                                    .frame(height: Self.rowHeight)
+                            }
+                            .buttonStyle(.plain)
+                            .contextMenu { contextMenu(for: profile) }
+                        }
                     }
-                    .buttonStyle(.plain)
-                    .contextMenu { contextMenu(for: profile) }
+                    .padding(.vertical, 4)
                 }
-                .listStyle(.inset)
-                .scrollContentBackground(.hidden)
                 .background(Color(NSColor.controlBackgroundColor))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.horizontal, 16)
