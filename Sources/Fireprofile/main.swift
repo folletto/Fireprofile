@@ -636,20 +636,26 @@ private struct IdentifiableURL: Identifiable {
 /// (the title bar) is no longer visible.
 struct WindowDragShim: NSViewRepresentable {
     func makeNSView(context: Context) -> WindowDragView { WindowDragView() }
-    func updateNSView(_ nsView: WindowDragView, context: Context) {
-        guard let window = nsView.window else { return }
-        window.isMovableByWindowBackground = true
-        window.backgroundColor = NSColor.windowBackgroundColor
-        nsView.needsDisplay = true
-    }
+    func updateNSView(_ nsView: WindowDragView, context: Context) { }
 
     final class WindowDragView: NSView {
-        // Use layer-based rendering so our background is composited correctly
-        // alongside SwiftUI's own layer tree.
-        override var wantsUpdateLayer: Bool { true }
-        override func updateLayer() {
+        override func viewDidMoveToWindow() {
+            super.viewDidMoveToWindow()
+            guard let window else { return }
+            window.isMovableByWindowBackground = true
+            window.backgroundColor = NSColor.windowBackgroundColor
+            // Paint this background view's layer directly — this is what the user sees
+            // in the gutters around the white card and above/below the list.
+            wantsLayer = true
             effectiveAppearance.performAsCurrentDrawingAppearance {
-                layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+                self.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+            }
+        }
+
+        override func viewDidChangeEffectiveAppearance() {
+            super.viewDidChangeEffectiveAppearance()
+            effectiveAppearance.performAsCurrentDrawingAppearance {
+                self.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
             }
         }
     }
