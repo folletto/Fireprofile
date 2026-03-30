@@ -121,6 +121,8 @@ struct ContentView: View {
     // ── Body ─────────────────────────────────────────────────────────────────
 
     var body: some View {
+        ZStack {
+        Color(NSColor.windowBackgroundColor).ignoresSafeArea()
         VStack(alignment: .leading, spacing: 0) {
 
             // ── Firefox logo ─────────────────────────────────────────────────
@@ -161,8 +163,8 @@ struct ContentView: View {
             // ── Status / error bar ───────────────────────────────────────────
             statusBar
         }
+        } // ZStack
         .frame(width: Self.windowWidth, height: contentHeight)
-        .background(Color(NSColor.windowBackgroundColor))
         .background(WindowDragShim())
         .onAppear { profiles = discoverProfiles(appDirectory: appDirectory) }
         // Expose create action to menu bar (nil when profiles list is empty → item stays disabled)
@@ -636,15 +638,12 @@ private struct IdentifiableURL: Identifiable {
 /// Required when using .hiddenTitleBar, because the normal drag region
 /// (the title bar) is no longer visible.
 struct WindowDragShim: NSViewRepresentable {
-    func makeNSView(context: Context) -> NSView {
-        let view = NSView()
-        Task { @MainActor in
-            view.window?.isMovableByWindowBackground = true
-            view.window?.backgroundColor = NSColor.windowBackgroundColor
-        }
-        return view
+    func makeNSView(context: Context) -> NSView { NSView() }
+    func updateNSView(_ nsView: NSView, context: Context) {
+        guard let window = nsView.window else { return }
+        window.isMovableByWindowBackground = true
+        window.backgroundColor = NSColor.windowBackgroundColor
     }
-    func updateNSView(_ nsView: NSView, context: Context) {}
 }
 
 // MARK: - Start
