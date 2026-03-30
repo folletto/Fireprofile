@@ -144,10 +144,13 @@ struct ContentView: View {
                     }
                     .buttonStyle(.plain)
                     .contextMenu { contextMenu(for: profile) }
-                    //.listRowBackground(Color(NSColor.controlBackgroundColor))
                 }
                 .listStyle(.inset)
-                //.scrollContentBackground(.hidden)
+                .scrollContentBackground(.hidden)
+                .background(Color(NSColor.controlBackgroundColor))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.horizontal, 16)
+                .padding(.vertical, 4)
             }
 
             // ── Status / error bar ───────────────────────────────────────────
