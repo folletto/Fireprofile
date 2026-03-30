@@ -648,8 +648,9 @@ struct WindowDragShim: NSViewRepresentable {
         // alongside SwiftUI's own layer tree.
         override var wantsUpdateLayer: Bool { true }
         override func updateLayer() {
-            layer?.backgroundColor = NSColor.windowBackgroundColor
-                .resolvedColor(with: effectiveAppearance).cgColor
+            effectiveAppearance.performAsCurrentDrawingAppearance {
+                layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+            }
         }
     }
 }
