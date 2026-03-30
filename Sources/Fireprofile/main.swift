@@ -121,8 +121,6 @@ struct ContentView: View {
     // ── Body ─────────────────────────────────────────────────────────────────
 
     var body: some View {
-        ZStack {
-        Color(NSColor.windowBackgroundColor).ignoresSafeArea()
         VStack(alignment: .leading, spacing: 0) {
 
             // ── Firefox logo ─────────────────────────────────────────────────
@@ -163,7 +161,6 @@ struct ContentView: View {
             // ── Status / error bar ───────────────────────────────────────────
             statusBar
         }
-        } // ZStack
         .frame(width: Self.windowWidth, height: contentHeight)
         .background(WindowDragShim())
         .onAppear { profiles = discoverProfiles(appDirectory: appDirectory) }
@@ -638,11 +635,22 @@ private struct IdentifiableURL: Identifiable {
 /// Required when using .hiddenTitleBar, because the normal drag region
 /// (the title bar) is no longer visible.
 struct WindowDragShim: NSViewRepresentable {
-    func makeNSView(context: Context) -> NSView { NSView() }
-    func updateNSView(_ nsView: NSView, context: Context) {
+    func makeNSView(context: Context) -> WindowDragView { WindowDragView() }
+    func updateNSView(_ nsView: WindowDragView, context: Context) {
         guard let window = nsView.window else { return }
         window.isMovableByWindowBackground = true
         window.backgroundColor = NSColor.windowBackgroundColor
+        nsView.needsDisplay = true
+    }
+
+    final class WindowDragView: NSView {
+        // Use layer-based rendering so our background is composited correctly
+        // alongside SwiftUI's own layer tree.
+        override var wantsUpdateLayer: Bool { true }
+        override func updateLayer() {
+            layer?.backgroundColor = NSColor.windowBackgroundColor
+                .resolvedColor(with: effectiveAppearance).cgColor
+        }
     }
 }
 
