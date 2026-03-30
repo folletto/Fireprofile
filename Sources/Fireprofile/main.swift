@@ -636,30 +636,40 @@ private struct IdentifiableURL: Identifiable {
 /// (the title bar) is no longer visible.
 struct WindowDragShim: NSViewRepresentable {
     func makeNSView(context: Context) -> WindowDragView { WindowDragView() }
-    func updateNSView(_ nsView: WindowDragView, context: Context) { }
+    func updateNSView(_ nsView: WindowDragView, context: Context) {
+        nsView.needsDisplay = true  // trigger updateLayer every render cycle
+    }
 
     final class WindowDragView: NSView {
+        // wantsUpdateLayer=true causes AppKit to call updateLayer() during the
+        // render cycle, when self.layer is guaranteed to exist — unlike
+        // viewDidMoveToWindow where the CALayer hasn't been created yet.
+        override var wantsUpdateLayer: Bool { true }
+
+        override func updateLayer() {
+            effectiveAppearance.performAsCurrentDrawingAppearance {
+                layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+            }
+        }
+
         override func viewDidMoveToWindow() {
             super.viewDidMoveToWindow()
             guard let window else { return }
             window.isMovableByWindowBackground = true
-            // Set gray on the NSWindow, on the NSHostingView (contentView), and on
-            // this background view's own layer — all three levels as a belt-and-suspenders
-            // fix since SwiftUI's Color/ZStack approaches don't reach the hosting view.
             effectiveAppearance.performAsCurrentDrawingAppearance {
-                let bg = NSColor.windowBackgroundColor.cgColor
                 window.backgroundColor = NSColor.windowBackgroundColor
+                // Also paint the NSHostingView (contentView) layer directly.
                 window.contentView?.wantsLayer = true
-                window.contentView?.layer?.backgroundColor = bg
-                self.wantsLayer = true
-                self.layer?.backgroundColor = bg
+                window.contentView?.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
             }
         }
 
         override func viewDidChangeEffectiveAppearance() {
             super.viewDidChangeEffectiveAppearance()
+            needsDisplay = true
+            guard let window else { return }
             effectiveAppearance.performAsCurrentDrawingAppearance {
-                self.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+                window.contentView?.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
             }
         }
     }
