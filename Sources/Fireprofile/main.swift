@@ -69,6 +69,7 @@ struct FireprofileApp: App {
         // Window (macOS 14+) gives a single non-duplicatable instance — right for a launcher.
         Window("Fireprofile", id: "main") {
             ContentView()
+                .containerBackground(Color(NSColor.windowBackgroundColor), for: .window)
         }
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
@@ -643,12 +644,16 @@ struct WindowDragShim: NSViewRepresentable {
             super.viewDidMoveToWindow()
             guard let window else { return }
             window.isMovableByWindowBackground = true
-            window.backgroundColor = NSColor.windowBackgroundColor
-            // Paint this background view's layer directly — this is what the user sees
-            // in the gutters around the white card and above/below the list.
-            wantsLayer = true
+            // Set gray on the NSWindow, on the NSHostingView (contentView), and on
+            // this background view's own layer — all three levels as a belt-and-suspenders
+            // fix since SwiftUI's Color/ZStack approaches don't reach the hosting view.
             effectiveAppearance.performAsCurrentDrawingAppearance {
-                self.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+                let bg = NSColor.windowBackgroundColor.cgColor
+                window.backgroundColor = NSColor.windowBackgroundColor
+                window.contentView?.wantsLayer = true
+                window.contentView?.layer?.backgroundColor = bg
+                self.wantsLayer = true
+                self.layer?.backgroundColor = bg
             }
         }
 
